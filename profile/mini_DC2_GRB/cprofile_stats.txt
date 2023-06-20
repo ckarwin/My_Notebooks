@@ -1,0 +1,725 @@
+Tue Jun 20 13:19:33 2023    output.prof
+
+         5276138 function calls (5274851 primitive calls) in 16.856 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+      3/1    0.000    0.000   16.856   16.856 {built-in method builtins.exec}
+        1    0.008    0.008   16.856   16.856 <string>:1(<module>)
+        1    5.926    5.926   16.848   16.848 /zfs/astrohe/ckarwin/COSI/COSIpy_Development/cosipy/cosipy/data_io/UnBinnedData.py:28(read_tra)
+       14    0.168    0.012    4.482    0.320 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/scoords/attitude.py:288(shape)
+       77    4.321    0.056    4.321    0.056 {built-in method numpy.asarray}
+       97    0.000    0.000    3.334    0.034 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/attributes.py:96(__get__)
+ 1028/817    0.002    0.000    3.156    0.004 {built-in method builtins.getattr}
+       12    0.000    0.000    2.167    0.181 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/sky_coordinate.py:286(__init__)
+      6/3    0.000    0.000    2.045    0.682 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/sky_coordinate.py:591(transform_to)
+       45    0.001    0.000    2.011    0.045 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/baseframe.py:294(__init__)
+  1050912    1.193    0.000    1.396    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/tqdm/std.py:1212(update)
+      6/3    0.000    0.000    1.352    0.451 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/transformations.py:1461(__call__)
+      9/3    0.000    0.000    1.351    0.450 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/transformations.py:1250(__call__)
+      9/3    0.000    0.000    1.347    0.449 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/transformations.py:1398(_affine_params)
+        1    0.000    0.000    1.346    1.346 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/scoords/spacecraft_frame.py:37(spacecraft_to_icrs)
+       29    0.000    0.000    1.150    0.040 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/baseframe.py:330(<dictcomp>)
+  1050922    1.056    0.000    1.056    0.000 {method 'split' of 'str' objects}
+  1055307    0.941    0.000    0.941    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/gzip.py:322(closed)
+  1050922    0.931    0.000    0.931    0.000 {method 'strip' of 'str' objects}
+  214/115    0.001    0.000    0.681    0.006 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/sky_coordinate.py:829(__getattr__)
+        7    0.000    0.000    0.670    0.096 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/sky_coordinate_parsers.py:62(_get_frame_without_data)
+   703327    0.618    0.000    0.618    0.000 {method 'append' of 'list' objects}
+     4388    0.015    0.000    0.377    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/gzip.py:302(read1)
+     4388    0.014    0.000    0.350    0.000 {method 'read1' of '_io.BufferedReader' objects}
+     4388    0.041    0.000    0.337    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/_compression.py:66(readinto)
+   128121    0.270    0.000    0.272    0.000 {built-in method numpy.array}
+     4388    0.037    0.000    0.268    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/gzip.py:462(read)
+        1    0.219    0.219    0.219    0.219 {built-in method gc.collect}
+     4436    0.204    0.000    0.204    0.000 {method 'read' of '_io.BufferedReader' objects}
+        1    0.000    0.000    0.195    0.195 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/subprocess.py:1090(communicate)
+        1    0.000    0.000    0.192    0.192 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/scoords/attitude.py:211(transform_to)
+      114    0.001    0.000    0.180    0.002 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/tqdm/std.py:1339(refresh)
+      115    0.001    0.000    0.179    0.002 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/tqdm/std.py:1478(display)
+       11    0.000    0.000    0.163    0.015 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/representation.py:845(represent_as)
+       20    0.000    0.000    0.160    0.008 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/quantity.py:570(__array_ufunc__)
+        7    0.000    0.000    0.160    0.023 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/sky_coordinate_parsers.py:211(_parse_coordinate_data)
+        5    0.000    0.000    0.158    0.032 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/representation.py:2027(from_cartesian)
+       20    0.157    0.008    0.157    0.008 {function Quantity.__array_ufunc__ at 0x7f1967bb09d0}
+        1    0.000    0.000    0.156    0.156 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/scoords/attitude.py:264(as_axes)
+        4    0.000    0.000    0.154    0.038 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/sky_coordinate_parsers.py:359(_parse_coordinate_arg)
+      345    0.001    0.000    0.154    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/tqdm/utils.py:333(disp_len)
+      345    0.001    0.000    0.152    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/tqdm/utils.py:329(_text_width)
+      345    0.038    0.000    0.151    0.000 {built-in method builtins.sum}
+     4387    0.142    0.000    0.142    0.000 {method 'decompress' of 'zlib.Decompress' objects}
+        1    0.086    0.086    0.119    0.119 /zfs/astrohe/ckarwin/COSI/COSIpy_Development/cosipy/cosipy/data_io/UnBinnedData.py:340(write_unbinned_output)
+    44368    0.075    0.000    0.113    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/tqdm/utils.py:330(<genexpr>)
+      115    0.001    0.000    0.108    0.001 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/tqdm/std.py:1164(__str__)
+      115    0.005    0.000    0.105    0.001 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/tqdm/std.py:355(format_meter)
+      115    0.001    0.000    0.070    0.001 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/tqdm/std.py:348(print_status)
+      115    0.000    0.000    0.067    0.001 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/tqdm/utils.py:341(disp_trim)
+        2    0.000    0.000    0.056    0.028 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/scoords/attitude.py:127(from_axes)
+     4387    0.015    0.000    0.047    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/gzip.py:513(_add_read_data)
+    44023    0.037    0.000    0.037    0.000 {built-in method unicodedata.east_asian_width}
+       17    0.000    0.000    0.034    0.002 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/representation.py:671(__init__)
+       17    0.001    0.000    0.033    0.002 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/representation.py:182(__init__)
+       17    0.000    0.000    0.031    0.002 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/representation.py:230(<listcomp>)
+       18    0.000    0.000    0.031    0.002 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/angles.py:664(__new__)
+       18    0.000    0.000    0.029    0.002 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/angles.py:686(wrap_angle)
+       18    0.020    0.001    0.029    0.002 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/angles.py:371(_wrap_at)
+     4389    0.028    0.000    0.028    0.000 {built-in method zlib.crc32}
+  743/342    0.003    0.000    0.027    0.000 {built-in method numpy.core._multiarray_umath.implement_array_function}
+       10    0.000    0.000    0.026    0.003 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/representation.py:1929(__init__)
+    27527    0.024    0.000    0.024    0.000 {built-in method builtins.len}
+     4434    0.016    0.000    0.024    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/gzip.py:85(read)
+    14577    0.024    0.000    0.024    0.000 {built-in method time.time}
+     4388    0.011    0.000    0.020    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/codecs.py:319(decode)
+        9    0.000    0.000    0.019    0.002 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/transformations.py:1095(_apply_transform)
+        1    0.000    0.000    0.017    0.017 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/h5py/_hl/files.py:567(__exit__)
+        1    0.017    0.017    0.017    0.017 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/h5py/_hl/files.py:542(close)
+        1    0.000    0.000    0.017    0.017 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/subprocess.py:756(__init__)
+       45    0.001    0.000    0.017    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/baseframe.py:394(_infer_data)
+        1    0.000    0.000    0.017    0.017 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/subprocess.py:1661(_execute_child)
+        1    0.000    0.000    0.015    0.015 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/funcs.py:30(cartesian_to_spherical)
+     4387    0.011    0.000    0.015    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/gzip.py:98(prepend)
+       11    0.000    0.000    0.014    0.001 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/h5py/_hl/group.py:69(create_dataset)
+       11    0.005    0.000    0.013    0.001 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/h5py/_hl/dataset.py:36(make_new_dset)
+        5    0.000    0.000    0.012    0.002 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/angles.py:697(__array_ufunc__)
+     4389    0.008    0.000    0.012    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/_compression.py:12(_check_not_closed)
+      116    0.001    0.000    0.012    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/quantity.py:408(__new__)
+        1    0.000    0.000    0.011    0.011 /zfs/astrohe/ckarwin/COSI/COSIpy_Development/cosipy/cosipy/data_io/UnBinnedData.py:297(construct_scy)
+        9    0.000    0.000    0.010    0.001 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/representation.py:1365(transform)
+  168/149    0.001    0.000    0.010    0.000 /zfs/astrohe/Software/COSIMain_u2/MEGAlib/external/root_v6.24.08/lib/ROOT/_facade.py:144(_importhook)
+       20    0.000    0.000    0.009    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/representation.py:1267(__init__)
+       21    0.000    0.000    0.009    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/baseframe.py:965(represent_as)
+  169/149    0.001    0.000    0.009    0.000 {built-in method builtins.__import__}
+        1    0.000    0.000    0.009    0.009 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/tqdm/std.py:560(__new__)
+     4388    0.009    0.000    0.009    0.000 {built-in method _codecs.utf_8_decode}
+        1    0.009    0.009    0.009    0.009 {built-in method posix.read}
+        1    0.000    0.000    0.008    0.008 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/tqdm/std.py:657(get_lock)
+        1    0.000    0.000    0.008    0.008 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/tqdm/std.py:92(__init__)
+     8776    0.008    0.000    0.008    0.000 {method '__exit__' of 'memoryview' objects}
+        1    0.000    0.000    0.008    0.008 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/tqdm/std.py:118(create_mp_lock)
+        3    0.000    0.000    0.008    0.003 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/representation.py:2010(to_cartesian)
+        1    0.000    0.000    0.008    0.008 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/multiprocessing/context.py:70(RLock)
+    51/43    0.000    0.000    0.008    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/quantity.py:1654(__array_function__)
+    51/43    0.004    0.000    0.008    0.000 {function Quantity.__array_function__ at 0x7f1967bb3430}
+      3/1    0.000    0.000    0.008    0.008 <frozen importlib._bootstrap>:1002(_find_and_load)
+      3/1    0.000    0.000    0.008    0.008 <frozen importlib._bootstrap>:967(_find_and_load_unlocked)
+        2    0.007    0.004    0.008    0.004 /zfs/astrohe/ckarwin/COSI/COSIpy_Development/cosipy/cosipy/data_io/UnBinnedData.py:313(polar2cart)
+        1    0.007    0.007    0.007    0.007 {built-in method _posixsubprocess.fork_exec}
+  147/145    0.001    0.000    0.007    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/baseframe.py:1594(__getattr__)
+       18    0.000    0.000    0.007    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/angles.py:558(__new__)
+     4388    0.007    0.000    0.007    0.000 {method 'cast' of 'memoryview' objects}
+       22    0.000    0.000    0.006    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/representation.py:1330(get_xyz)
+        2    0.000    0.000    0.006    0.003 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/scoords/attitude.py:87(from_matrix)
+        2    0.006    0.003    0.006    0.003 {built-in method from_matrix}
+      3/1    0.000    0.000    0.006    0.006 <frozen importlib._bootstrap>:659(_load_unlocked)
+        8    0.000    0.000    0.006    0.001 <__array_function__ internals>:177(stack)
+      2/1    0.000    0.000    0.006    0.006 <frozen importlib._bootstrap_external>:844(exec_module)
+        8    0.000    0.000    0.006    0.001 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/numpy/core/shape_base.py:357(stack)
+       11    0.000    0.000    0.006    0.001 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/h5py/_hl/filters.py:146(fill_dcpl)
+       18    0.000    0.000    0.006    0.000 <__array_function__ internals>:177(nan_to_num)
+      5/1    0.000    0.000    0.006    0.006 <frozen importlib._bootstrap>:220(_call_with_frames_removed)
+        1    0.000    0.000    0.006    0.006 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/multiprocessing/synchronize.py:10(<module>)
+        2    0.000    0.000    0.005    0.003 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/representation.py:1613(represent_as)
+       18    0.001    0.000    0.005    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/numpy/lib/type_check.py:404(nan_to_num)
+        8    0.000    0.000    0.005    0.001 <__array_function__ internals>:177(concatenate)
+        2    0.000    0.000    0.005    0.003 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/representation.py:1594(to_cartesian)
+       11    0.001    0.000    0.005    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/h5py/_hl/filters.py:338(guess_chunk)
+       18    0.001    0.000    0.005    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/angles.py:566(_validate_angles)
+      230    0.003    0.000    0.005    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/tqdm/utils.py:222(_is_ascii)
+        3    0.000    0.000    0.005    0.002 <__array_function__ internals>:177(transpose)
+        3    0.000    0.000    0.005    0.002 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/numpy/core/fromnumeric.py:601(transpose)
+        3    0.000    0.000    0.005    0.002 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/numpy/core/fromnumeric.py:51(_wrapfunc)
+        2    0.000    0.000    0.005    0.002 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/numpy/core/fromnumeric.py:38(_wrapit)
+     2128    0.002    0.000    0.005    0.000 {built-in method builtins.isinstance}
+      358    0.002    0.000    0.005    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/baseframe.py:816(get_representation_component_names)
+        2    0.000    0.000    0.004    0.002 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/representation.py:1555(__init__)
+        8    0.000    0.000    0.004    0.001 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/builtin_frames/fk5.py:37(_precession_matrix)
+        8    0.000    0.000    0.004    0.001 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/earth_orientation.py:123(precession_matrix_Capitaine)
+       54    0.000    0.000    0.004    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/angles.py:112(__new__)
+        4    0.000    0.000    0.004    0.001 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/builtin_frames/galactic_transforms.py:18(fk5_to_gal)
+     1021    0.003    0.000    0.004    0.000 {method 'format' of 'str' objects}
+  777/762    0.001    0.000    0.004    0.000 {built-in method builtins.hasattr}
+      285    0.001    0.000    0.004    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/quantity.py:533(__array_finalize__)
+      115    0.001    0.000    0.004    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/tqdm/std.py:342(fp_write)
+       16    0.000    0.000    0.004    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/earth_orientation.py:152(_precess_from_J2000_Capitaine)
+      156    0.000    0.000    0.004    0.000 <__array_function__ internals>:177(product)
+       72    0.000    0.000    0.004    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/core.py:1101(to)
+      232    0.001    0.000    0.004    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/tqdm/utils.py:143(inner)
+        3    0.000    0.000    0.003    0.001 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/builtin_frames/galactic_transforms.py:29(_gal_to_fk5)
+       53    0.000    0.000    0.003    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/core.py:921(is_equivalent)
+      156    0.000    0.000    0.003    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/numpy/core/fromnumeric.py:3734(product)
+        3    0.000    0.000    0.003    0.001 <frozen importlib._bootstrap>:901(_find_spec)
+      454    0.001    0.000    0.003    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/utils/decorators.py:768(__get__)
+      117    0.003    0.000    0.003    0.000 {method 'write' of '_io.TextIOWrapper' objects}
+        3    0.000    0.000    0.003    0.001 <frozen importlib._bootstrap_external>:1415(find_spec)
+        3    0.000    0.000    0.003    0.001 <frozen importlib._bootstrap_external>:1383(_get_spec)
+       36    0.000    0.000    0.003    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/numpy/lib/ufunclike.py:48(func)
+       85    0.001    0.000    0.003    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/quantity.py:683(_new_view)
+      156    0.000    0.000    0.003    0.000 <__array_function__ internals>:177(prod)
+       36    0.000    0.000    0.003    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/angles.py:159(_set_unit)
+      221    0.001    0.000    0.003    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/numpy/core/fromnumeric.py:69(_wrapreduction)
+       99    0.001    0.000    0.003    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/core.py:1068(_to)
+       17    0.000    0.000    0.003    0.000 <frozen importlib._bootstrap_external>:1514(find_spec)
+      185    0.000    0.000    0.003    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/abc.py:117(__instancecheck__)
+       48    0.000    0.000    0.002    0.000 <__array_function__ internals>:177(polyval)
+      285    0.001    0.000    0.002    0.000 {method 'view' of 'numpy.ndarray' objects}
+       36    0.000    0.000    0.002    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/quantity.py:1929(_set_unit)
+        1    0.000    0.000    0.002    0.002 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/h5py/_hl/files.py:363(__init__)
+        1    0.000    0.000    0.002    0.002 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/representation.py:1494(cross)
+       82    0.000    0.000    0.002    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/core.py:1030(_get_converter)
+       11    0.002    0.000    0.002    0.000 {built-in method builtins.__build_class__}
+      185    0.000    0.000    0.002    0.000 {built-in method _abc._abc_instancecheck}
+      229    0.001    0.000    0.002    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/tqdm/std.py:288(format_interval)
+        7    0.000    0.000    0.002    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/core.py:836(__rmul__)
+       48    0.001    0.000    0.002    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/numpy/lib/polynomial.py:704(polyval)
+        1    0.000    0.000    0.002    0.002 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/tqdm/std.py:846(__init__)
+        1    0.002    0.002    0.002    0.002 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/h5py/_hl/files.py:206(make_fid)
+     2415    0.002    0.000    0.002    0.000 {built-in method builtins.ord}
+        1    0.002    0.002    0.002    0.002 /zfs/astrohe/ckarwin/COSI/COSIpy_Development/cosipy/cosipy/data_io/UnBinnedData.py:328(cart2polar)
+   301/74    0.001    0.000    0.002    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/abc.py:121(__subclasscheck__)
+        5    0.000    0.000    0.002    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/utils/shapes.py:44(copy)
+      221    0.000    0.000    0.002    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/baseframe.py:695(get_frame_attr_names)
+        5    0.000    0.000    0.002    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/baseframe.py:1463(_apply)
+       53    0.000    0.000    0.002    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/core.py:952(_is_equivalent)
+  107/106    0.000    0.000    0.002    0.000 <frozen importlib._bootstrap>:1033(_handle_fromlist)
+        6    0.000    0.000    0.002    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/transformations.py:382(get_transform)
+      126    0.001    0.000    0.002    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/core.py:666(_get_physical_type_id)
+   301/74    0.001    0.000    0.002    0.000 {built-in method _abc._abc_subclasscheck}
+      115    0.001    0.000    0.002    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/tqdm/std.py:1460(format_dict)
+    43/28    0.000    0.000    0.002    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/quantity.py:624(_result_as_quantity)
+      156    0.000    0.000    0.002    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/numpy/core/fromnumeric.py:2927(prod)
+        2    0.000    0.000    0.002    0.001 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/tqdm/std.py:1279(close)
+        5    0.000    0.000    0.002    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/baseframe.py:1488(apply_method)
+       54    0.000    0.000    0.002    0.000 <__array_function__ internals>:177(any)
+        3    0.000    0.000    0.002    0.001 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/builtin_frames/icrs_fk5_transforms.py:44(fk5_to_icrs)
+       18    0.000    0.000    0.002    0.000 <__array_function__ internals>:177(isposinf)
+        5    0.000    0.000    0.002    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/representation.py:993(_apply)
+      147    0.001    0.000    0.002    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/quantity.py:854(to_value)
+        5    0.001    0.000    0.002    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/representation.py:356(_apply)
+       21    0.000    0.000    0.002    0.000 <__array_function__ internals>:177(moveaxis)
+       19    0.000    0.000    0.002    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/angles.py:691(__array_finalize__)
+        6    0.001    0.000    0.002    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/transformations.py:264(find_shortest_path)
+       11    0.000    0.000    0.001    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/h5py/_hl/base.py:102(array_for_new_object)
+      221    0.000    0.000    0.001    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/baseframe.py:697(<dictcomp>)
+      210    0.001    0.000    0.001    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/baseframe.py:1637(__setattr__)
+      211    0.001    0.000    0.001    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/sky_coordinate.py:822(_is_name)
+       18    0.000    0.000    0.001    0.000 <__array_function__ internals>:177(isneginf)
+       18    0.001    0.000    0.001    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/numpy/lib/ufunclike.py:127(isposinf)
+        2    0.000    0.000    0.001    0.001 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/scoords/attitude.py:232(as_matrix)
+        2    0.001    0.001    0.001    0.001 {method 'as_matrix' of 'scipy.spatial.transform._rotation.Rotation' objects}
+       22    0.000    0.000    0.001    0.000 <frozen importlib._bootstrap_external>:135(_path_stat)
+      679    0.001    0.000    0.001    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/tqdm/std.py:233(__call__)
+      102    0.000    0.000    0.001    0.000 <__array_function__ internals>:177(copyto)
+       22    0.001    0.000    0.001    0.000 {built-in method posix.stat}
+       21    0.000    0.000    0.001    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/numpy/core/numeric.py:1410(moveaxis)
+       54    0.000    0.000    0.001    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/numpy/core/fromnumeric.py:2307(any)
+        6    0.000    0.000    0.001    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/baseframe.py:1872(__init__)
+       18    0.001    0.000    0.001    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/numpy/lib/ufunclike.py:199(isneginf)
+       48    0.000    0.000    0.001    0.000 <__array_function__ internals>:177(zeros_like)
+       60    0.000    0.000    0.001    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/quantity.py:1200(quantity_iter)
+        3    0.000    0.000    0.001    0.000 <frozen importlib._bootstrap_external>:154(_path_isfile)
+      115    0.001    0.000    0.001    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/tqdm/std.py:188(__format__)
+        3    0.000    0.000    0.001    0.000 <frozen importlib._bootstrap_external>:145(_path_is_mode_type)
+        9    0.000    0.000    0.001    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/baseframe.py:942(realize_frame)
+        9    0.000    0.000    0.001    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/baseframe.py:844(_replicate)
+        2    0.000    0.000    0.001    0.001 <frozen importlib._bootstrap_external>:916(get_code)
+        1    0.000    0.000    0.001    0.001 <__array_function__ internals>:177(cross)
+        1    0.001    0.001    0.001    0.001 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/numpy/core/numeric.py:1485(cross)
+      221    0.001    0.000    0.001    0.000 {method 'reduce' of 'numpy.ufunc' objects}
+       30    0.000    0.000    0.001    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/quantity.py:1010(__getattr__)
+       72    0.000    0.000    0.001    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/numpy/core/_ufunc_config.py:32(seterr)
+       17    0.000    0.000    0.001    0.000 <__array_function__ internals>:177(broadcast_arrays)
+       20    0.000    0.000    0.001    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/quantity_helper/converters.py:133(converters_and_unit)
+       16    0.000    0.000    0.001    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/quantity.py:1019(get_virtual_unit_attribute)
+        2    0.000    0.000    0.001    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/gzip.py:429(_read_gzip_header)
+       48    0.000    0.000    0.001    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/numpy/core/numeric.py:76(zeros_like)
+      118    0.001    0.000    0.001    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/tqdm/std.py:104(acquire)
+       60    0.001    0.000    0.001    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/matrix_utilities.py:41(rotation_matrix)
+       46    0.000    0.000    0.001    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/attributes.py:149(convert_input)
+       42    0.000    0.000    0.001    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/baseframe.py:808(representation_info)
+        8    0.000    0.000    0.001    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/quantity_helper/function_helpers.py:367(concatenate)
+       31    0.000    0.000    0.001    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/baseframe.py:1886(__setattr__)
+        8    0.000    0.000    0.001    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/quantity_helper/function_helpers.py:351(_iterable_helper)
+      808    0.001    0.000    0.001    0.000 {method 'get' of 'dict' objects}
+       42    0.000    0.000    0.001    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/baseframe.py:762(_get_representation_info)
+        3    0.000    0.000    0.001    0.000 <frozen importlib._bootstrap>:558(module_from_spec)
+      118    0.000    0.000    0.001    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/tqdm/std.py:108(release)
+       83    0.000    0.000    0.001    0.000 <frozen importlib._bootstrap_external>:121(_path_join)
+       25    0.000    0.000    0.001    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/baseframe.py:73(_get_repr_classes)
+       45    0.000    0.000    0.001    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/baseframe.py:367(_infer_representation)
+        8    0.000    0.000    0.001    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/quantity_helper/function_helpers.py:313(_quantities2arrays)
+       11    0.000    0.000    0.001    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/h5py/_hl/dataset.py:614(__init__)
+       17    0.000    0.000    0.001    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/numpy/lib/stride_tricks.py:480(broadcast_arrays)
+       10    0.000    0.000    0.001    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/core.py:1479(physical_type)
+       24    0.000    0.000    0.001    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/matrix_utilities.py:14(matrix_product)
+       36    0.000    0.000    0.001    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/numpy/core/_ufunc_config.py:429(__enter__)
+      200    0.000    0.000    0.001    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/quantity.py:748(_set_unit)
+    27/25    0.000    0.000    0.001    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/sky_coordinate.py:861(__setattr__)
+       36    0.000    0.000    0.001    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/numpy/core/_ufunc_config.py:434(__exit__)
+       20    0.000    0.000    0.001    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/quantity.py:650(<genexpr>)
+      345    0.001    0.000    0.001    0.000 {method 'sub' of 're.Pattern' objects}
+        2    0.000    0.000    0.001    0.000 <frozen importlib._bootstrap_external>:645(_compile_bytecode)
+      247    0.000    0.000    0.001    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/transformations.py:113(frame_attributes)
+       42    0.000    0.000    0.001    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/numpy/core/numeric.py:1347(normalize_axis_tuple)
+       89    0.000    0.000    0.001    0.000 {built-in method builtins.all}
+        2    0.000    0.000    0.001    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/quantity.py:815(to)
+       53    0.000    0.000    0.001    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/core.py:749(_normalize_equivalencies)
+       24    0.001    0.000    0.001    0.000 {built-in method _functools.reduce}
+        2    0.001    0.000    0.001    0.000 {built-in method marshal.loads}
+      110    0.000    0.000    0.001    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/transformations.py:433(lookup_name)
+        1    0.000    0.000    0.001    0.001 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/builtin_frames/icrs_fk5_transforms.py:36(icrs_to_fk5)
+        1    0.000    0.000    0.001    0.001 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/tqdm/_monitor.py:30(__init__)
+      168    0.000    0.000    0.001    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/core.py:1971(__call__)
+       55    0.000    0.000    0.001    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/core.py:1047(<lambda>)
+      573    0.001    0.000    0.001    0.000 {built-in method builtins.divmod}
+      115    0.000    0.000    0.001    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/tqdm/std.py:155(__init__)
+       18    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/numpy/lib/type_check.py:394(_getmaxmin)
+      470    0.000    0.000    0.000    0.000 {method 'startswith' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1171(create_module)
+      540    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/sky_coordinate.py:352(frame)
+        1    0.000    0.000    0.000    0.000 {built-in method _imp.create_dynamic}
+      466    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/baseframe.py:700(get_representation_cls)
+    91/90    0.000    0.000    0.000    0.000 {built-in method builtins.setattr}
+        7    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/quantity.py:1923(__quantity_subclass__)
+       76    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/core.py:2168(decompose)
+        8    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/numpy/core/shape_base.py:432(<listcomp>)
+      131    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/core.py:2348(decompose)
+      149    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/core.py:1878(decompose)
+      451    0.000    0.000    0.000    0.000 {method 'items' of 'dict' objects}
+      114    0.000    0.000    0.000    0.000 {built-in method now}
+       24    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/quantity.py:1206(__getitem__)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/multiprocessing/synchronize.py:186(__init__)
+        7    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/sky_coordinate_parsers.py:567(_get_representation_attrs)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/multiprocessing/synchronize.py:50(__init__)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/threading.py:880(start)
+       10    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/physical.py:489(get_physical_type)
+       11    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/sky_coordinate_parsers.py:32(_get_frame_class)
+      408    0.000    0.000    0.000    0.000 {method 'keys' of 'dict' objects}
+      341    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/quantity.py:916(unit)
+      137    0.000    0.000    0.000    0.000 {built-in method builtins.issubclass}
+       83    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:123(<listcomp>)
+      234    0.000    0.000    0.000    0.000 {built-in method builtins.max}
+       72    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/numpy/core/_ufunc_config.py:131(geterr)
+       32    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/quantity_helper/function_helpers.py:344(<genexpr>)
+      126    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/core.py:674(<listcomp>)
+       11    0.000    0.000    0.000    0.000 <__array_function__ internals>:177(all)
+       48    0.000    0.000    0.000    0.000 <__array_function__ internals>:177(empty_like)
+       72    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/core.py:2535(_condition_arg)
+       19    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/baseframe.py:675(shape)
+       10    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/physical.py:340(__eq__)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1036(get_data)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/subprocess.py:1207(_close_pipe_fds)
+      312    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/numpy/core/fromnumeric.py:2922(_prod_dispatcher)
+      221    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/numpy/core/fromnumeric.py:70(<dictcomp>)
+       10    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/quantity_helper/helpers.py:204(helper_multiplication)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/multiprocessing/synchronize.py:114(_make_name)
+        2    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/transformations.py:99(frame_set)
+       86    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/baseframe.py:628(getter)
+       24    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/quantity.py:1525(_to_own_unit)
+      285    0.000    0.000    0.000    0.000 {function Quantity.__array_finalize__ at 0x7f1967bb08b0}
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/threading.py:563(wait)
+       57    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:398(parent)
+       26    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/baseframe.py:38(_get_repr_cls)
+      121    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/transformations.py:85(_cached_names)
+       25    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/representation.py:408(shape)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/multiprocessing/util.py:10(<module>)
+        2    0.000    0.000    0.000    0.000 {built-in method builtins.next}
+       24    0.000    0.000    0.000    0.000 {method 'transpose' of 'numpy.ndarray' objects}
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/tempfile.py:149(__next__)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/threading.py:280(wait)
+       11    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/transformations.py:451(get_names)
+        2    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/quantity.py:796(_to_value)
+       16    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/time/core.py:1325(__getattr__)
+       11    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/numpy/core/fromnumeric.py:2406(all)
+       11    0.000    0.000    0.000    0.000 {built-in method h5py.h5t.py_create}
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:486(_init_module_attrs)
+       15    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/utils/shapes.py:213(__bool__)
+      158    0.000    0.000    0.000    0.000 {method 'update' of 'dict' objects}
+        2    0.000    0.000    0.000    0.000 {built-in method io.open_code}
+       17    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/core.py:2565(unit_scale_converter)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/gzip.py:25(open)
+      117    0.000    0.000    0.000    0.000 {method 'flush' of '_io.TextIOWrapper' objects}
+        4    0.000    0.000    0.000    0.000 {method 'acquire' of '_thread.lock' objects}
+      118    0.000    0.000    0.000    0.000 {method 'acquire' of '_multiprocessing.SemLock' objects}
+      192    0.000    0.000    0.000    0.000 {built-in method builtins.abs}
+        3    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/transformations.py:1432(__init__)
+       10    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/core.py:818(__mul__)
+       17    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/numpy/lib/stride_tricks.py:416(_broadcast_shape)
+       10    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/physical.py:181(_standardize_physical_type_names)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/h5py/_hl/files.py:115(make_fapl)
+       15    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/utils/shapes.py:195(size)
+       42    0.000    0.000    0.000    0.000 {built-in method builtins.any}
+       23    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/representation.py:261(get_name)
+       10    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/physical.py:153(_replace_temperatures_with_kelvin)
+       20    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/quantity_helper/converters.py:171(<listcomp>)
+        8    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/quantity_helper/function_helpers.py:290(_as_quantity)
+      144    0.000    0.000    0.000    0.000 {built-in method numpy.geterrobj}
+      119    0.000    0.000    0.000    0.000 {method 'acquire' of '_thread.RLock' objects}
+      115    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/tqdm/utils.py:57(__init__)
+       42    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/numpy/core/numeric.py:1397(<listcomp>)
+      115    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/tqdm/utils.py:61(__format__)
+       11    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/h5py/_hl/filters.py:293(get_filters)
+       16    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/time/core.py:734(to_value)
+      144    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/core.py:1094(<genexpr>)
+        4    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:361(cache_from_source)
+      149    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/core.py:721(powers)
+      149    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/core.py:714(bases)
+       11    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/h5py/_hl/base.py:73(guess_dtype)
+      108    0.000    0.000    0.000    0.000 {built-in method numpy.zeros}
+      115    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/tqdm/std.py:169(colour)
+      171    0.000    0.000    0.000    0.000 {method 'rstrip' of 'str' objects}
+       72    0.000    0.000    0.000    0.000 {built-in method numpy.seterrobj}
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/gzip.py:133(__init__)
+      108    0.000    0.000    0.000    0.000 {method 'update' of 'set' objects}
+       56    0.000    0.000    0.000    0.000 {built-in method _heapq.heapify}
+      124    0.000    0.000    0.000    0.000 {method 'add' of 'set' objects}
+       32    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/time/core.py:640(shape)
+      131    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/core.py:2287(bases)
+      119    0.000    0.000    0.000    0.000 {method 'release' of '_thread.RLock' objects}
+      118    0.000    0.000    0.000    0.000 {method 'release' of '_multiprocessing.SemLock' objects}
+       17    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/numpy/lib/stride_tricks.py:538(<listcomp>)
+       40    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/inspect.py:73(isclass)
+        4    0.000    0.000    0.000    0.000 {built-in method builtins.print}
+       36    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/numpy/lib/ufunclike.py:22(func)
+        5    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:385(cached)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/tempfile.py:138(rng)
+      115    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/tqdm/std.py:165(colour)
+       10    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/core.py:2367(is_unity)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:156(__enter__)
+      121    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/core.py:2294(powers)
+        1    0.000    0.000    0.000    0.000 {built-in method _thread.start_new_thread}
+       53    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/core.py:65(_normalize_equivalencies)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:491(_get_cached)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/tqdm/std.py:583(_decr_instances)
+      107    0.000    0.000    0.000    0.000 {method 'pop' of 'dict' objects}
+       18    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/numpy/core/getlimits.py:458(__new__)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/subprocess.py:1184(wait)
+       16    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/time/core.py:1314(cache)
+       53    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/core.py:229(equivalencies)
+       83    0.000    0.000    0.000    0.000 {method 'rpartition' of 'str' objects}
+      102    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/numpy/core/multiarray.py:1071(copyto)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/threading.py:802(__init__)
+       49    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/representation.py:326(components)
+       87    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/representation.py:754(differentials)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/tempfile.py:152(<listcomp>)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/transformations.py:41(frame_attrs_from_set)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/subprocess.py:1885(_wait)
+       81    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/core.py:1780(name)
+       66    0.000    0.000    0.000    0.000 {method 'pop' of 'list' objects}
+       88    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:231(_verbose_message)
+       72    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/core.py:707(scale)
+       66    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/numpy/lib/stride_tricks.py:542(<genexpr>)
+        3    0.000    0.000    0.000    0.000 {method 'close' of '_io.BufferedReader' objects}
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/random.py:117(__init__)
+       88    0.000    0.000    0.000    0.000 {method 'join' of 'str' objects}
+        3    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/transformations.py:786(__init__)
+       11    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/h5py/_hl/base.py:177(_e)
+       69    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/core.py:341(get_current_unit_registry)
+       88    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/_collections_abc.py:315(__subclasshook__)
+        8    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/random.py:343(choice)
+       82    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/core.py:2280(scale)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/contextlib.py:452(callback)
+        2    0.000    0.000    0.000    0.000 {built-in method io.open}
+       72    0.000    0.000    0.000    0.000 {built-in method numpy.asanyarray}
+       65    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/baseframe.py:656(data)
+       64    0.000    0.000    0.000    0.000 {method '__exit__' of '_thread.RLock' objects}
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/random.py:126(seed)
+        3    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/transformations.py:1442(_combine_statics)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:166(_get_module_lock)
+        3    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/_weakrefset.py:63(__iter__)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1509(_get_spec)
+        8    0.000    0.000    0.000    0.000 <__array_function__ internals>:177(dot)
+       15    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/quantity.py:1193(__iter__)
+       36    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/numpy/core/_ufunc_config.py:425(__init__)
+       60    0.000    0.000    0.000    0.000 {method 'index' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/tqdm/utils.py:282(_screen_shape_linux)
+        3    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/quantity_helper/erfa.py:52(helper_s2p)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/tqdm/std.py:576(_get_free_pos)
+       10    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/physical.py:200(<setcomp>)
+       25    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/h5py/_hl/filters.py:389(<genexpr>)
+       58    0.000    0.000    0.000    0.000 {built-in method _heapq.heappop}
+       32    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/representation.py:679(_validate_differentials)
+       53    0.000    0.000    0.000    0.000 {built-in method numpy.core._multiarray_umath.normalize_axis_index}
+       42    0.000    0.000    0.000    0.000 {built-in method _operator.index}
+       19    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/representation.py:552(get_component)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/tqdm/utils.py:162(__init__)
+       10    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/quantity_helper/helpers.py:29(get_converter)
+        5    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/quantity_helper/erfa.py:68(helper_p2s)
+        8    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/numpy/core/shape_base.py:348(_stack_dispatcher)
+       14    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/matrix_utilities.py:30(matrix_transpose)
+        8    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/numpy/core/shape_base.py:420(<listcomp>)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/gzip.py:326(close)
+       58    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/quantity_helper/converters.py:176(<genexpr>)
+       54    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/numpy/core/fromnumeric.py:2302(_any_dispatcher)
+        2    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/quantity_helper/erfa.py:41(helper_s2c)
+        4    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:127(_path_split)
+       43    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/representation.py:53(get_reprdiff_cls_hash)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/subprocess.py:1872(_try_wait)
+       29    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/scoords/attitude.py:314(convert_input)
+       21    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/baseframe.py:634(cache)
+        8    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/random.py:237(_randbelow_with_getrandbits)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/contextlib.py:489(__exit__)
+       22    0.000    0.000    0.000    0.000 {built-in method builtins.sorted}
+       36    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/angles.py:155(_convert_unit_to_angle_unit)
+       48    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/numpy/lib/polynomial.py:700(_polyval_dispatcher)
+       48    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/numpy/core/numeric.py:72(_zeros_like_dispatcher)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/tqdm/std.py:579(<setcomp>)
+        3    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/sky_coordinate_parsers.py:454(<listcomp>)
+       48    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/numpy/core/multiarray.py:80(empty_like)
+       28    0.000    0.000    0.000    0.000 {method 'endswith' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/multiprocessing/util.py:171(register_after_fork)
+        4    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/tqdm/std.py:112(__enter__)
+        4    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/tqdm/std.py:115(__exit__)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/weakref.py:105(__init__)
+       37    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/baseframe.py:668(has_data)
+        1    0.000    0.000    0.000    0.000 {built-in method posix.waitpid}
+        3    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/_distutils_hack/__init__.py:89(find_spec)
+       11    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/h5py/_hl/base.py:41(find_item_type)
+       17    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/representation.py:253(<listcomp>)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/gzip.py:402(__init__)
+        1    0.000    0.000    0.000    0.000 {function Random.seed at 0x7f1968a14f70}
+        2    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/threading.py:528(__init__)
+        2    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/posixpath.py:150(dirname)
+       32    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/representation.py:1952(lon)
+       36    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/numpy/lib/ufunclike.py:68(_dispatcher)
+       12    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:878(__exit__)
+        3    0.000    0.000    0.000    0.000 {built-in method posix.close}
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:160(__exit__)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/_weakrefset.py:111(remove)
+       29    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/angles.py:682(wrap_angle)
+        6    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:79(_unpack_uint32)
+       12    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:874(__enter__)
+       32    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/time/formats.py:177(jd1)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/gzip.py:517(_read_eof)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:696(spec_from_file_location)
+        3    0.000    0.000    0.000    0.000 {method 'remove' of 'set' objects}
+        8    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/numpy/core/shape_base.py:207(_arrays_for_stack_dispatcher)
+       27    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/h5py/_hl/base.py:305(id)
+        2    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/_weakrefset.py:27(__exit__)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/contextlib.py:408(__init__)
+        2    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/tqdm/std.py:1300(fp_write)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/multiprocessing/synchronize.py:360(Barrier)
+       25    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/h5py/_hl/filters.py:349(<genexpr>)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:560(_classify_pyc)
+       23    0.000    0.000    0.000    0.000 {method 'lower' of 'str' objects}
+       21    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/numpy/core/numeric.py:1472(<listcomp>)
+       16    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/scoords/attitude.py:43(rot)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:58(__init__)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:87(acquire)
+        8    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/baseframe.py:747(differential_type)
+       18    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1346(_path_importer_cache)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/weakref.py:165(__setitem__)
+        5    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/angles.py:500(_no_angle_subclass)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:593(_validate_timestamp_pyc)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/representation.py:1991(represent_as)
+       23    0.000    0.000    0.000    0.000 {method 'insert' of 'list' objects}
+       25    0.000    0.000    0.000    0.000 {method '__exit__' of 'h5py._objects.FastRLock' objects}
+        2    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/_weakrefset.py:86(add)
+       17    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/utils.py:159(is_effectively_unity)
+       26    0.000    0.000    0.000    0.000 {method 'values' of 'dict' objects}
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/h5py/_hl/compat.py:11(filename_encode)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:112(release)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:185(cb)
+       22    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/h5py/_hl/filters.py:165(rq_tuple)
+       14    0.000    0.000    0.000    0.000 {method 'swapaxes' of 'numpy.ndarray' objects}
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1077(path_stats)
+       21    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/numpy/core/numeric.py:1406(_moveaxis_dispatcher)
+        1    0.000    0.000    0.000    0.000 {built-in method fcntl.ioctl}
+       15    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/quantity.py:974(isscalar)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/contextlib.py:470(_push_exit_callback)
+       16    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/core.py:149(registry)
+       14    0.000    0.000    0.000    0.000 {method 'encode' of 'str' objects}
+       18    0.000    0.000    0.000    0.000 {built-in method _imp.acquire_lock}
+       12    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/h5py/_hl/base.py:338(__init__)
+       22    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/attributes.py:361(convert_input)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/tqdm/std.py:329(status_printer)
+       20    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/quantity_helper/helpers.py:22(_d)
+        2    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/gzip.py:409(_init_read)
+       18    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/numpy/lib/type_check.py:400(_nan_to_num_dispatcher)
+        2    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/threading.py:228(__init__)
+        2    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/os.py:804(fsencode)
+       18    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/representation.py:909(with_differentials)
+       16    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/quantity.py:925(equivalencies)
+        8    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/numpy/core/shape_base.py:424(<setcomp>)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/sky_coordinate.py:373(shape)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/_compression.py:39(__init__)
+        2    0.000    0.000    0.000    0.000 {built-in method _struct.unpack}
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/contextlib.py:402(_create_cb_wrapper)
+        2    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/tqdm/utils.py:136(disable_on_exception)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/baseframe.py:54(_get_diff_cls)
+        8    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:129(<genexpr>)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/tqdm/utils.py:215(_supports_unicode)
+       15    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/units/quantity.py:665(__quantity_subclass__)
+       17    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/numpy/lib/stride_tricks.py:476(_broadcast_arrays_dispatcher)
+       17    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/representation.py:1959(lat)
+        2    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/gzip.py:413(_read_exact)
+       18    0.000    0.000    0.000    0.000 {built-in method _imp.release_lock}
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/h5py/_hl/group.py:34(__init__)
+       12    0.000    0.000    0.000    0.000 {built-in method h5py.h5.get_config}
+       13    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/representation.py:942(without_differentials)
+        4    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/baseframe.py:1084(<genexpr>)
+       11    0.000    0.000    0.000    0.000 {method 'lstrip' of 'bytes' objects}
+        2    0.000    0.000    0.000    0.000 {method '__exit__' of '_io._IOBase' objects}
+       11    0.000    0.000    0.000    0.000 {method 'replace' of 'str' objects}
+        2    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/transformations.py:339(<listcomp>)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/tqdm/utils.py:74(__eq__)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/subprocess.py:1568(_get_handles)
+       17    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:68(_relax_case)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/tqdm/utils.py:105(__init__)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/contextlib.py:404(_exit_wrapper)
+       12    0.000    0.000    0.000    0.000 {built-in method __new__ of type object at 0x55a2318a12c0}
+       13    0.000    0.000    0.000    0.000 {built-in method posix.fspath}
+        2    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/_weakrefset.py:53(_commit_removals)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/_compression.py:59(close)
+        2    0.000    0.000    0.000    0.000 {built-in method posix.pipe}
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/weakref.py:290(update)
+       12    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/representation.py:1966(distance)
+        7    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/baseframe.py:787(<listcomp>)
+       11    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/h5py/_hl/filters.py:91(_normalize_external)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:811(find_spec)
+        7    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/sky_coordinate_parsers.py:328(_get_representation_component_units)
+        2    0.000    0.000    0.000    0.000 {built-in method zlib.decompressobj}
+       12    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/representation.py:1362(to_cartesian)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/subprocess.py:1825(_handle_exitstatus)
+       10    0.000    0.000    0.000    0.000 {built-in method _thread.allocate_lock}
+       10    0.000    0.000    0.000    0.000 {method 'issubset' of 'set' objects}
+        9    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/representation.py:1406(<genexpr>)
+       11    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/h5py/_hl/base.py:94(is_float16_dtype)
+        2    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/_weakrefset.py:17(__init__)
+       11    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/numpy/core/fromnumeric.py:2401(_all_dispatcher)
+        7    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/representation.py:797(_re_represent_differentials)
+        4    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/baseframe.py:1880(__getattr__)
+       11    0.000    0.000    0.000    0.000 {method 'getrandbits' of '_random.Random' objects}
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1179(exec_module)
+        2    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/scoords/attitude.py:26(__init__)
+        3    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/tqdm/std.py:228(__init__)
+        9    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/transformations.py:1166(<listcomp>)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/gzip.py:345(flush)
+        2    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/_weakrefset.py:21(__enter__)
+        2    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/tqdm/std.py:1167(_comparable)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:736(find_spec)
+        8    0.000    0.000    0.000    0.000 {method '__exit__' of '_thread.lock' objects}
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/subprocess.py:1045(__del__)
+        2    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/tqdm/utils.py:171(__eq__)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:351(__init__)
+        8    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/numpy/core/multiarray.py:148(concatenate)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/multiprocessing/synchronize.py:46(SemLock)
+        8    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/numpy/core/multiarray.py:736(dot)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:523(_check_name_wrapper)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/multiprocessing/util.py:182(Finalize)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1155(__init__)
+        4    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/baseframe.py:1250(is_frame_attr_default)
+        2    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/tqdm/std.py:1171(__hash__)
+        8    0.000    0.000    0.000    0.000 {method 'bit_length' of 'int' objects}
+        4    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/scoords/attitude.py:55(frame)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/tqdm/utils.py:201(_is_utf)
+        2    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/tqdm/utils.py:88(__getattr__)
+        3    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/tqdm/utils.py:101(wrapper_setattr)
+        7    0.000    0.000    0.000    0.000 {built-in method _thread.get_ident}
+        2    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/posixpath.py:41(_get_sep)
+        5    0.000    0.000    0.000    0.000 {method 'copy' of 'dict' objects}
+        5    0.000    0.000    0.000    0.000 {method 'copy' of 'list' objects}
+        6    0.000    0.000    0.000    0.000 {built-in method from_bytes}
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/weakref.py:348(__new__)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/_bootlocale.py:33(getpreferredencoding)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/gzip.py:79(__init__)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/tqdm/std.py:1161(__del__)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/threading.py:1162(daemon)
+        5    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/representation.py:1017(<listcomp>)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:152(__init__)
+        2    0.000    0.000    0.000    0.000 {method 'append' of 'collections.deque' objects}
+        5    0.000    0.000    0.000    0.000 {method 'rfind' of 'str' objects}
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1006(__init__)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/multiprocessing/context.py:233(get_context)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/threading.py:1358(current_thread)
+        5    0.000    0.000    0.000    0.000 {built-in method builtins.callable}
+        2    0.000    0.000    0.000    0.000 {built-in method _imp._fix_co_filename}
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/gzip.py:352(fileno)
+        1    0.000    0.000    0.000    0.000 {method 'set_alignment' of 'h5py.h5p.PropFAID' objects}
+        2    0.000    0.000    0.000    0.000 {built-in method atexit.register}
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/threading.py:256(__enter__)
+        1    0.000    0.000    0.000    0.000 {built-in method posix.sysconf}
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/threading.py:268(_acquire_restore)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:35(_new_module)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/threading.py:1147(daemon)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/threading.py:1229(_make_invoke_excepthook)
+        4    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/representation.py:1566(lon)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/multiprocessing/synchronize.py:123(Semaphore)
+        2    0.000    0.000    0.000    0.000 {method 'copy' of 'set' objects}
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/codecs.py:309(__init__)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/threading.py:271(_is_owned)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/representation.py:740(_raise_if_has_differentials)
+        3    0.000    0.000    0.000    0.000 {built-in method _imp.is_frozen}
+        4    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/representation.py:1573(lat)
+        1    0.000    0.000    0.000    0.000 {built-in method utcfromtimestamp}
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/threading.py:259(__exit__)
+        2    0.000    0.000    0.000    0.000 {method 'popitem' of 'dict' objects}
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/threading.py:265(_release_save)
+        3    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/numpy/core/fromnumeric.py:597(_transpose_dispatcher)
+        3    0.000    0.000    0.000    0.000 {built-in method builtins.id}
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:175(_path_isabs)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/multiprocessing/synchronize.py:90(_make_methods)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/multiprocessing/util.py:385(ForkAwareLocal)
+        3    0.000    0.000    0.000    0.000 {method 'setdefault' of 'dict' objects}
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/multiprocessing/synchronize.py:210(Condition)
+        2    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/scoords/attitude.py:166(<listcomp>)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/weakref.py:353(__init__)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/threading.py:757(_newname)
+        1    0.000    0.000    0.000    0.000 {built-in method _imp.is_builtin}
+        2    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/_collections_abc.py:409(__subclasshook__)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:406(has_location)
+        2    0.000    0.000    0.000    0.000 {built-in method _weakref.proxy}
+        1    0.000    0.000    0.000    0.000 {built-in method _locale.nl_langinfo}
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/attributes.py:54(__init__)
+        2    0.000    0.000    0.000    0.000 {method 'setter' of 'property' objects}
+        1    0.000    0.000    0.000    0.000 {built-in method posix.getpid}
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:841(create_module)
+        1    0.000    0.000    0.000    0.000 {built-in method builtins.locals}
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/subprocess.py:250(_cleanup)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/tqdm/utils.py:231(_screen_shape_wrapper)
+        2    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/astropy/coordinates/representation.py:1358(from_cartesian)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/h5py/_hl/files.py:177(make_fcpl)
+        1    0.000    0.000    0.000    0.000 {built-in method numpy.empty}
+        2    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/threading.py:536(is_set)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1031(get_filename)
+        1    0.000    0.000    0.000    0.000 {built-in method numpy.promote_types}
+        1    0.000    0.000    0.000    0.000 {built-in method sys.exc_info}
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/multiprocessing/synchronize.py:321(Event)
+        1    0.000    0.000    0.000    0.000 {built-in method sys.audit}
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/multiprocessing/util.py:368(ForkAwareThreadLock)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/subprocess.py:1837(_internal_poll)
+        1    0.000    0.000    0.000    0.000 {function DecompressReader.close at 0x7f19682c5280}
+        1    0.000    0.000    0.000    0.000 {method 'difference' of 'set' objects}
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/multiprocessing/context.py:197(get_start_method)
+        1    0.000    0.000    0.000    0.000 {method 'rfind' of 'bytes' objects}
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/tqdm/std.py:100(<listcomp>)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        1    0.000    0.000    0.000    0.000 {built-in method builtins.min}
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/multiprocessing/synchronize.py:142(BoundedSemaphore)
+        1    0.000    0.000    0.000    0.000 {built-in method _imp.exec_dynamic}
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/_compression.py:150(tell)
+        1    0.000    0.000    0.000    0.000 {method 'rstrip' of 'bytes' objects}
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/multiprocessing/util.py:108(_platform_supports_abstract_sockets)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/multiprocessing/util.py:48(debug)
+        1    0.000    0.000    0.000    0.000 {method 'count' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/multiprocessing/process.py:37(current_process)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/numpy/core/numeric.py:1481(_cross_dispatcher)
+        1    0.000    0.000    0.000    0.000 {method 'fileno' of '_io.BufferedReader' objects}
+        1    0.000    0.000    0.000    0.000 {built-in method posix.WIFSTOPPED}
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/h5py/_hl/files.py:563(__enter__)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/multiprocessing/synchronize.py:159(Lock)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/contextlib.py:486(__enter__)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/gzip.py:367(readable)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/codecs.py:260(__init__)
+        1    0.000    0.000    0.000    0.000 {built-in method posix.waitstatus_to_exitcode}
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/_distutils_hack/__init__.py:96(<lambda>)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/multiprocessing/synchronize.py:184(RLock)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/gzip.py:370(writable)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/_compression.py:36(readable)
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/site-packages/tqdm/std.py:1315(<lambda>)
+        1    0.000    0.000    0.000    0.000 {method 'release' of '_thread.lock' objects}
+        1    0.000    0.000    0.000    0.000 /zfs/astrohe/Software/COSIMain_u2/lib/python3.9/gzip.py:373(seekable)
+        1    0.000    0.000    0.000    0.000 {method 'pop' of 'collections.deque' objects}
+        1    0.000    0.000    0.000    0.000 {method '__enter__' of '_thread.lock' objects}
+
+
