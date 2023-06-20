@@ -1,0 +1,23 @@
+1. Profile memory usage line by line:
+
+In class:
+from memory_profiler import profile
+f = open("memory_usage.txt","w")
+@profile(stream=f)
+
+command line:
+python -m memory_profiler client.py
+
+2. Profile memory usage vs. time:
+
+In class
+@profile
+
+command line:
+mprof run client.py
+mprof plot
+
+3. Using cProfile:
+#cProfile.run('analysis.read_tra(output_name="GRB_unbinned_data")', sort = 'cumtime')
+#cProfile.run('analysis.read_tra(output_name="GRB_unbinned_data")', filename = "dataIO.pstats")
+#os.system("gprof2dot -f pstats dataIO.pstats | dot -Tpng -o output.png")

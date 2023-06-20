@@ -1,0 +1,272 @@
+Filename: /zfs/astrohe/ckarwin/COSI/COSIpy_Development/cosipy/cosipy/data_io/UnBinnedData.py
+
+Line #    Mem usage    Increment  Occurrences   Line Contents
+=============================================================
+    26    651.5 MiB    651.5 MiB           1       @profile(stream=f)
+    27                                             def read_tra(self, output_name="unbinned_data", run_test=False):
+    28                                                 
+    29                                                 """
+    30                                                 Reads in MEGAlib .tra (or .tra.gz) file.
+    31                                                 Returns COSI dataset as a dictionary of the form:
+    32                                                 cosi_dataset = {'Energies':erg,
+    33                                                                 'TimeTags':tt,
+    34                                                                 'Xpointings':np.array([lonX,latX]).T,
+    35                                                                 'Ypointings':np.array([lonY,latY]).T,
+    36                                                                 'Zpointings':np.array([lonZ,latZ]).T,
+    37                                                                 'Phi':phi,
+    38                                                                 'Chi local':chi_loc,
+    39                                                                 'Psi local':psi_loc,
+    40                                                                 'Distance':dist,
+    41                                                                 'Chi galactic':chi_gal,
+    42                                                                 'Psi galactic':psi_gal}
+    43                                                 
+    44                                                 Arrays contain unbinned data.
+    45                                                 
+    46                                                 Inputs:
+    47                                                 
+    48                                                 output_name: prefix of output file. 
+    49                                                 
+    50                                                 run_test: This is for unit testing only! Keep False
+    51                                                 unless comparing to MEGAlib calculations. 
+    52                                         
+    53                                                 Note: The current code is only able to handle data with Compton events.
+    54                                                       It will need to be modified to handle single-site and pair.    
+    55                                                 """
+    56                                             
+    57                                                 # Initialise empty lists:
+    58                                                     
+    59                                                 # Total photon energy
+    60    651.5 MiB      0.0 MiB           1           erg = []
+    61                                                 # Time tag in UNIX time
+    62    651.5 MiB      0.0 MiB           1           tt = []
+    63                                                 # Event Type (CE or PE)
+    64    651.5 MiB      0.0 MiB           1           et = []
+    65                                                 # Galactic latitude of X direction of spacecraft
+    66    651.5 MiB      0.0 MiB           1           latX = []
+    67                                                 # Galactic lontitude of X direction of spacecraft
+    68    651.5 MiB      0.0 MiB           1           lonX = []
+    69                                                 # Galactic latitude of Z direction of spacecraft
+    70    651.5 MiB      0.0 MiB           1           latZ = []
+    71                                                 # Galactic longitude of Z direction of spacecraft
+    72    651.5 MiB      0.0 MiB           1           lonZ = []
+    73                                                 # Compton scattering angle
+    74    651.5 MiB      0.0 MiB           1           phi = []
+    75                                                 # Measured data space angle chi (azimuth direction; 0..360 deg)
+    76    651.5 MiB      0.0 MiB           1           chi_loc = []
+    77                                                 # Measured data space angle psi (polar direction; 0..180 deg)
+    78    651.5 MiB      0.0 MiB           1           psi_loc = []
+    79                                                 # Measured gal angle chi (lon direction)
+    80    651.5 MiB      0.0 MiB           1           chi_gal = []
+    81                                                 # Measured gal angle psi (lat direction)
+    82    651.5 MiB      0.0 MiB           1           psi_gal = [] 
+    83                                                 # Components of dg (position vector from 1st interaion to 2nd)
+    84    651.5 MiB      0.0 MiB           1           dg_x = []
+    85    651.5 MiB      0.0 MiB           1           dg_y = []
+    86    651.5 MiB      0.0 MiB           1           dg_z = []
+    87                                         
+    88                                                 # Define electron rest energy, which is used in calculation
+    89                                                 # of Compton scattering angle.
+    90    651.5 MiB      0.0 MiB           1           c_E0 = 510.9989500015 # keV
+    91                                         
+    92                                                 # This is for unit testing purposes only.
+    93                                                 # Use same value as MEGAlib for direct comparison: 
+    94    651.5 MiB      0.0 MiB           1           if run_test == True:
+    95                                                     c_E0 = 510.999
+    96                                         
+    97    651.5 MiB      0.0 MiB           1           print("Preparing to read file...")
+    98                                         
+    99                                                 # Open .tra.gz file:
+   100    651.5 MiB      0.0 MiB           1           if self.data_file.endswith(".gz"):
+   101    651.5 MiB      0.0 MiB           1               f = gzip.open(self.data_file,"rt")
+   102                                                     
+   103                                                     # Need to get number of lines for progress bar.
+   104                                                     # First try fast method for unix-based systems:
+   105    651.5 MiB      0.0 MiB           1               try:
+   106    651.5 MiB      0.0 MiB           2                   proc=subprocess.Popen('gunzip -c %s | wc -l' %self.data_file, \
+   107    651.5 MiB      0.0 MiB           1                           shell=True, stdout=subprocess.PIPE)
+   108    651.5 MiB      0.0 MiB           1                   num_lines = float(proc.communicate()[0])
+   109                                         
+   110                                                     # If fast method fails, use long method, which should work in all cases.
+   111                                                     except:
+   112                                                         print("Initial attempt failed.")
+   113                                                         print("Using long method...")
+   114                                                         g = gzip.open(self.data_file,"rt")
+   115                                                         num_lines = sum(1 for line in g)
+   116                                                         g.close()
+   117                                         
+   118                                                 # Open .tra file:
+   119                                                 elif self.data_file.endswith(".tra"):
+   120                                                     f = open(self.data_file,"r")
+   121                                         
+   122                                                     try:
+   123                                                         proc=subprocess.Popen('wc -l < %s' %self.data_file, \
+   124                                                                 shell=True, stdout=subprocess.PIPE)
+   125                                                         num_lines = float(proc.communicate()[0])
+   126                                                         
+   127                                                     except:
+   128                                                         print("Initial attempt failed.")
+   129                                                         print("Using long method...")
+   130                                                         g = open(self.data_file,"rt")
+   131                                                         num_lines = sum(1 for line in g)
+   132                                                         g.close()
+   133                                         
+   134                                                 else: 
+   135                                                     print()
+   136                                                     print("ERROR: Input data file must have '.tra' or '.gz' extenstion.")
+   137                                                     print()
+   138                                                     sys.exit()
+   139                                                 
+   140                                                 # Read tra file line by line:
+   141    651.5 MiB      0.0 MiB           1           print("Reading file...")
+   142    651.6 MiB      0.1 MiB           1           pbar = tqdm(total=num_lines) # start progress bar
+   143    683.4 MiB      7.0 MiB     1050913           for line in f:
+   144                                                  
+   145    683.4 MiB      2.3 MiB     1050912               this_line = line.strip().split()
+   146    683.4 MiB      2.3 MiB     1050912               pbar.update(1) # update progress bar
+   147                                         
+   148                                                     # Total photon energy and Compton angle: 
+   149    683.4 MiB      0.7 MiB     1050912               if this_line[0] == "CE":
+   150                                         
+   151                                                         # Compute the total photon energy:
+   152    683.4 MiB      0.1 MiB       63909                   m_Eg = float(this_line[1]) # Energy of scattered gamma ray in keV
+   153    683.4 MiB      0.0 MiB       63909                   m_Ee = float(this_line[3]) # Energy of recoil electron in keV
+   154    683.4 MiB      0.0 MiB       63909                   this_erg = m_Eg + m_Ee
+   155    683.4 MiB      0.6 MiB       63909                   erg.append(this_erg) 
+   156                                                      
+   157                                                         # Compute the Compton scatter angle due to the standard equation,
+   158                                                         # i.e. neglect the movement of the electron,
+   159                                                         # which would lead to a Doppler-broadening.
+   160    683.4 MiB      0.0 MiB       63909                   this_value = 1.0 - c_E0 * (1.0/m_Eg - 1.0/(m_Ee + m_Eg))
+   161    683.4 MiB      0.1 MiB       63909                   this_phi = np.arccos(this_value) # radians
+   162    683.4 MiB      1.0 MiB       63909                   phi.append(this_phi)
+   163                                                     
+   164                                                     # Time tag in Unix time (seconds):
+   165    683.4 MiB      0.6 MiB     1050912               if this_line[0] == "TI":
+   166    683.4 MiB      0.9 MiB       63909                   tt.append(float(this_line[1]))
+   167                                         
+   168                                                     # Event type: 
+   169    683.4 MiB      0.5 MiB     1050912               if this_line[0] == "ET":
+   170    683.4 MiB      1.6 MiB       63909                   et.append(this_line[1])
+   171                                         
+   172                                                     # X axis of detector orientation in Galactic coordinates:
+   173    683.4 MiB      0.3 MiB     1050912               if this_line[0] == "GX":
+   174    683.4 MiB      0.5 MiB       63909                   this_lonX = np.deg2rad(float(this_line[1])) # radians
+   175    683.4 MiB      0.7 MiB       63909                   this_latX = np.deg2rad(float(this_line[2])) # radians
+   176    683.4 MiB      0.5 MiB       63909                   lonX.append(this_lonX)
+   177    683.4 MiB      1.6 MiB       63909                   latX.append(this_latX)
+   178                                                     
+   179                                                     # Z axis of detector orientation in Galactic coordinates:
+   180    683.4 MiB      0.5 MiB     1050912               if this_line[0] == "GZ":
+   181    683.4 MiB      0.3 MiB       63909                   this_lonZ = np.deg2rad(float(this_line[1])) # radians
+   182    683.4 MiB      1.9 MiB       63909                   this_latZ = np.deg2rad(float(this_line[2])) # radians
+   183    683.4 MiB      0.6 MiB       63909                   lonZ.append(this_lonZ)
+   184    683.4 MiB      1.0 MiB       63909                   latZ.append(this_latZ)
+   185                                          
+   186                                                     # Interaction position information: 
+   187    683.4 MiB      0.3 MiB     1050912               if (this_line[0] == "CH"):
+   188                                                         
+   189                                                         # First interaction:
+   190    683.4 MiB      0.0 MiB      220095                   if this_line[1] == "0":
+   191    683.4 MiB      0.4 MiB      127818                       v1 = np.array((float(this_line[2]),\
+   192    683.4 MiB      0.1 MiB       63909                               float(this_line[3]),float(this_line[4])))
+   193                                                         
+   194                                                         # Second interaction:
+   195    683.4 MiB      0.1 MiB      220095                   if this_line[1] == "1":
+   196    683.4 MiB      0.1 MiB      127818                       v2 = np.array((float(this_line[2]),
+   197    683.4 MiB      0.0 MiB       63909                           float(this_line[3]), float(this_line[4])))
+   198                                                         
+   199                                                             # Compute position vector between first two interactions:
+   200    683.4 MiB      0.0 MiB       63909                       dg = v1 - v2
+   201    683.4 MiB      2.1 MiB       63909                       dg_x.append(dg[0])
+   202    683.4 MiB      1.0 MiB       63909                       dg_y.append(dg[1])
+   203    683.4 MiB      2.2 MiB       63909                       dg_z.append(dg[2])
+   204                                                         
+   205                                                 # Close progress bar:
+   206    683.5 MiB      0.1 MiB           1           pbar.close()
+   207    683.5 MiB      0.0 MiB           1           print("Making COSI data set...")
+   208                                         
+   209                                                 # Initialize arrays:
+   210    683.5 MiB      0.0 MiB           1           erg = np.array(erg)
+   211    683.5 MiB      0.0 MiB           1           phi = np.array(phi)
+   212    683.5 MiB      0.0 MiB           1           tt = np.array(tt)
+   213    683.5 MiB      0.0 MiB           1           et = np.array(et)
+   214                                         
+   215                                                 # Convert dg vector from 3D cartesian coordinates 
+   216                                                 # to spherical polar coordinates, and then extract distance 
+   217                                                 # b/n first two interactions (in cm), psi (rad), and chi (rad).
+   218                                                 # Note: the resulting angles are latitude/longitude (or elevation/azimuthal).
+   219    691.8 MiB      8.3 MiB           1           conv = astro_co.cartesian_to_spherical(np.array(dg_x), np.array(dg_y), np.array(dg_z))
+   220    691.8 MiB      0.0 MiB           1           dist = conv[0].value 
+   221    691.8 MiB      0.0 MiB           1           psi_loc = conv[1].value 
+   222    691.8 MiB      0.0 MiB           1           chi_loc = conv[2].value
+   223                                         
+   224                                                 # Attitude vectors:
+   225    691.8 MiB      0.0 MiB           1           latX = np.array(latX)
+   226    691.8 MiB      0.0 MiB           1           lonX = np.array(lonX)
+   227                                                 
+   228    691.8 MiB      0.0 MiB           1           latZ = np.array(latZ)
+   229    691.8 MiB      0.0 MiB           1           lonZ = np.array(lonZ)
+   230                                         
+   231                                                 # Calculate chi_gal and psi_gal from x,y,z coordinates of events:
+   232    691.8 MiB      0.0 MiB           1           xcoords = SkyCoord(lonX*u.rad, latX*u.rad, frame = 'galactic')
+   233    691.8 MiB      0.0 MiB           1           zcoords = SkyCoord(lonZ*u.rad, latZ*u.rad, frame = 'galactic')
+   234    700.2 MiB      8.4 MiB           1           attitude = Attitude.from_axes(x=xcoords, z=zcoords, frame = 'galactic')
+   235    700.6 MiB      0.3 MiB           1           c = SkyCoord(np.array(dg_x), np.array(dg_y), np.array(dg_z), representation_type='cartesian', frame = SpacecraftFrame(attitude = attitude))   
+   236    713.3 MiB     12.7 MiB           1           c_rotated = c.transform_to('galactic')
+   237    713.3 MiB      0.0 MiB           1           chi_gal = np.array(c_rotated.l.deg)
+   238    713.3 MiB      0.0 MiB           1           psi_gal = np.array(c_rotated.b.deg)
+   239                                         
+   240                                                 # Change longitudes from 0..360 deg to -180..180 deg
+   241    713.3 MiB      0.0 MiB           1           lonX[lonX > np.pi] -= 2*np.pi
+   242    713.3 MiB      0.0 MiB           1           lonZ[lonZ > np.pi] -= 2*np.pi
+   243                                         
+   244                                                 # Construct Y direction from X and Z direction
+   245    713.3 MiB      0.0 MiB           2           lonlatY = self.construct_scy(np.rad2deg(lonX),np.rad2deg(latX),
+   246    713.3 MiB      0.0 MiB           1                                   np.rad2deg(lonZ),np.rad2deg(latZ))
+   247    713.3 MiB      0.0 MiB           1           lonY = np.deg2rad(lonlatY[0])
+   248    713.3 MiB      0.0 MiB           1           latY = np.deg2rad(lonlatY[1])
+   249                                             
+   250                                                 # Rotate psi_loc to colatitude, measured from positive z direction.
+   251                                                 # This is requred for mhealpy input.
+   252    713.3 MiB      0.0 MiB           1           psi_loc = (np.pi/2.0) - psi_loc 
+   253                                                 
+   254                                                 # Define test values for psi and chi local;
+   255                                                 # this is only for comparing to MEGAlib:
+   256    713.3 MiB      0.0 MiB           1           self.psi_loc_test = psi_loc
+   257    713.3 MiB      0.0 MiB           1           self.chi_loc_test = chi_loc
+   258                                         
+   259                                                 # Do the same for psi and chi galactic.
+   260                                                 # First need to convert to radians:
+   261    713.3 MiB      0.0 MiB           1           chi_gal_rad = np.array(c_rotated.l.rad)
+   262    713.3 MiB      0.0 MiB           1           psi_gal_rad = np.array(c_rotated.b.rad)
+   263                                                 
+   264                                                 # Rotate psi_gal_rad to colatitude, measured from positive 
+   265                                                 # z direction:
+   266    713.3 MiB      0.0 MiB           1           psi_gal_rad = (np.pi/2.0) - psi_gal_rad
+   267    713.3 MiB      0.0 MiB           1           self.psi_gal_test = psi_gal_rad
+   268                                                 
+   269                                                 # Rotate chi_gal_test by pi, defined with respect to 
+   270                                                 # the negative x-axis:
+   271    713.3 MiB      0.0 MiB           1           self.chi_gal_test = chi_gal_rad - np.pi
+   272                                         
+   273                                                 # Make observation dictionary
+   274    713.3 MiB      0.0 MiB           2           cosi_dataset = {'Energies':erg,
+   275    713.3 MiB      0.0 MiB           1                           'TimeTags':tt,
+   276    713.3 MiB      0.0 MiB           1                           'Xpointings':np.array([lonX,latX]).T,
+   277    713.3 MiB      0.0 MiB           1                           'Ypointings':np.array([lonY,latY]).T,
+   278    713.3 MiB      0.0 MiB           1                           'Zpointings':np.array([lonZ,latZ]).T,
+   279    713.3 MiB      0.0 MiB           1                           'Phi':phi,
+   280    713.3 MiB      0.0 MiB           1                           'Chi local':chi_loc,
+   281    713.3 MiB      0.0 MiB           1                           'Psi local':psi_loc,
+   282    713.3 MiB      0.0 MiB           1                           'Distance':dist,
+   283    713.3 MiB      0.0 MiB           1                           'Chi galactic':chi_gal,
+   284    713.3 MiB      0.0 MiB           1                           'Psi galactic':psi_gal} 
+   285    713.3 MiB      0.0 MiB           1           self.cosi_dataset = cosi_dataset
+   286                                         
+   287                                                 # Write unbinned data to file (either fits or hdf5):
+   288    713.3 MiB      0.0 MiB           1           print("Saving file...")
+   289    714.1 MiB      0.8 MiB           1           self.write_unbinned_output(output_name=output_name) 
+   290                                                 
+   291    714.1 MiB      0.0 MiB           1           return 
+
+
