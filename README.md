@@ -1,2 +1,1 @@
-# my_notebooks
-Random Codes
+# Random Codes
