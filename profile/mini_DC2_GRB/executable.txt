@@ -21,3 +21,28 @@ mprof plot
 #cProfile.run('analysis.read_tra(output_name="GRB_unbinned_data")', sort = 'cumtime')
 #cProfile.run('analysis.read_tra(output_name="GRB_unbinned_data")', filename = "dataIO.pstats")
 #os.system("gprof2dot -f pstats dataIO.pstats | dot -Tpng -o output.png")
+
+4. Getting peak memory usage from running process in Linux:
+
+To monitor from command line:
+Run top or htop from command line. Note that this will only show currently running 
+processes. To monitor the usage of a python script run it with &:
+python myscript.py &
+then you can run htop while the script is running.
+
+To get the peak usage from a run within a python script:
+
+Inside the python code, place the following, right before the end:
+
+os.system("pidof python > pid.txt")
+f = open("pid.txt","r")
+lines = f.readlines()
+this_pid = int(lines[0].split()[0])
+
+# Max of total memory usage, including virtual memory:
+os.system("grep ^VmPeak /proc/%s/status > peak_all.txt" %this_pid)
+
+# Peak RAM usage:
+os.system("grep ^VmHWM /proc/%s/status > peak_ram.txt" %this_pid)
+
+Note: The peak RAM usage should be comparable to the peak memory usage from method 2 above. 
